@@ -29,7 +29,7 @@ function CropTool({ image, setCropData, aspectRatio }) {
         const formData = new FormData();
         formData.append('image', blob, 'croppedImage.png');
 
-        const response = await fetch('http://localhost:5000/api/images/upload', {
+        const response = await fetch('https://croptoolbackend-817w4yrm9-farrukhazeems-projects.vercel.app/api/images/upload', {
           method: 'POST',
           body: formData,
         });
